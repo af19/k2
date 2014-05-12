@@ -1,0 +1,21 @@
+<%= form_for(@sub) do |f| %>
+  <% if @sub.errors.any? %>
+    <div id="error_explanation">
+      <!-- <h2><%= pluralize(@sub.errors.count, "error") %> prohibited this sub from being saved:</h2>
+ -->
+      <ul>
+      <% @sub.errors.each_with_index do |message, i| %>
+        <li><%= message[1] %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :email %><br>
+    <%= f.email_field :email, autofocus: true, required: true %>
+  </div>
+  <div class="actions">
+    <%= f.submit "Subscribe" %>
+  </div>
+<% end %>
