@@ -11,11 +11,12 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :email %><br>
-    <%= f.email_field :email, autofocus: true, required: true %>
+  <div class="field form-group form-inline">
+    
+    <%= f.email_field :email, class: "form-control", autofocus: true, required: true, placeholder: "Email address..." %>
+    <%= f.submit "Subscribe", class: "btn btn-success" %>
   </div>
-  <div class="actions">
-    <%= f.submit "Subscribe" %>
+  
+    
   </div>
 <% end %>
